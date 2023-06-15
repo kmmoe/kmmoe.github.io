@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="© Sunplace  微软的大多数产品，如早期版本(不出现在以下列表中)的_Windows_、_Office_，以及_Microsoft SQL Server_、_Visual Studio_等产品，可以直接使用密钥激活。 批量授权版本（VOL）可以使用KMS激活，零售版不可以使用KMS激活。 本文没有任何激活和破解工具。 激活方法  WindowsWindows Server（LTSC 版本）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微软产品KMS激活指南">
+<meta property="og:url" content="http://example.com/posts/20180920.html">
+<meta property="og:site_name" content="填言">
+<meta property="og:description" content="© Sunplace  微软的大多数产品，如早期版本(不出现在以下列表中)的_Windows_、_Office_，以及_Microsoft SQL Server_、_Visual Studio_等产品，可以直接使用密钥激活。 批量授权版本（VOL）可以使用KMS激活，零售版不可以使用KMS激活。 本文没有任何激活和破解工具。 激活方法  WindowsWindows Server（LTSC 版本）">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-09-20T06:29:26.000Z">
+<meta property="article:modified_time" content="2023-06-15T03:16:45.395Z">
+<meta property="article:author" content="X">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="激活">
+<meta property="article:tag" content="kms">
+<meta property="article:tag" content="微软">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/posts/20180920.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/posts/20180920.html","path":"posts/20180920.html","title":"微软产品KMS激活指南"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>微软产品KMS激活指南 | 填言</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">填言</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">失语症研究中心</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">Windows</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">Windows Server（LTSC 版本）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">Windows Server（半年频道版本）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">Windows 11 和 Windows 10（半年频道版本）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">Windows 10（LTSC&#x2F;LTSB 版本）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">早期版本的 Windows Server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">早期版本的 Windows</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text">Office</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">X</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">226</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">261</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/posts/20180920.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="X">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="填言">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="微软产品KMS激活指南 | 填言">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          微软产品KMS激活指南
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-09-20 14:29:26" itemprop="dateCreated datePublished" datetime="2018-09-20T14:29:26+08:00">2018-09-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-06-15 11:16:45" itemprop="dateModified" datetime="2023-06-15T11:16:45+08:00">2023-06-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%A0%94%E7%A9%B6%E9%99%A2/" itemprop="url" rel="index"><span itemprop="name">软件研究院</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%A0%81%E5%86%9C/" itemprop="url" rel="index"><span itemprop="name">码农</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>© Sunplace</p>
+<blockquote>
+<p>微软的大多数产品，如早期版本(不出现在以下列表中)的_Windows_、_Office_，以及_Microsoft SQL Server_、_Visual Studio_等产品，可以直接使用密钥激活。 批量授权版本（VOL）可以使用KMS激活，零售版不可以使用KMS激活。 本文没有任何激活和破解工具。 <a target="_blank" rel="noopener" href="https://blog.kkii.org/post/2961.html">激活方法</a></p>
+</blockquote>
+<h3><span id="windows">Windows</span></h3><h3><span id="windows-serverltsc-版本">Windows Server（LTSC 版本）</span></h3><h4><span id="windows-server-2022">Windows Server 2022</span></h4><p>操作系统版本</p>
+<p>KMS 客户端产品密钥</p>
+<p>Windows Server 2022 Datacenter</p>
+<p>WX4NM-KYWYW-QJJR4-XV3QB-6VM33</p>
+<p>Windows Server 2022 Standard</p>
+<p>VDYBN-27WPP-V4HQT-9VMD4-VMK7H</p>
+<h4><span id="windows-server-2019">Windows Server 2019</span></h4><p>操作系统版本</p>
+<p>KMS 客户端产品密钥</p>
+<p>Windows Server 2019 Datacenter</p>
+<p>WMDGN-G9PQG-XVVXX-R3X43-63DFG</p>
+<p>Windows Server 2019 Standard</p>
+<p>N69G4-B89J2-4G8F4-WWYCC-J464C</p>
+<p>Windows Server 2019 Essentials</p>
+<p>WVDHN-86M7X-466P6-VHXV7-YY726</p>
+<h4><span id="windows-server-2016">Windows Server 2016</span></h4><p>操作系统版本</p>
+<p>KMS 客户端产品密钥</p>
+<p>Windows Server 2016 Datacenter</p>
+<p>CB7KF-BWN84-R7R2Y-793K2-8XDDG</p>
+<p>Windows Server 2016 Standard</p>
+<p>WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY</p>
+<p>Windows Server 2016 Essentials</p>
+<p>JCKRF-N37P4-C2D82-9YXRT-4M63B</p>
+<h3><span id="windows-server半年频道版本">Windows Server（半年频道版本）</span></h3><h4><span id="windows-server版本-20h2-2004-1909-1903-和-1809">Windows Server，版本 20H2、2004、1909、1903 和 1809</span></h4><p>操作系统版本</p>
+<p>KMS 客户端产品密钥</p>
+<p>Windows Server Datacenter</p>
+<p>6NMRW-2C8FM-D24W7-TQWMY-CWH2D</p>
+<p>Windows Server Standard</p>
+<p>N2KJX-J94YW-TQVFB-DG9YT-724CC</p>
+<h3><span id="windows-11-和-windows-10半年频道版本">Windows 11 和 Windows 10（半年频道版本）</span></h3><p>有关受支持的版本和服务终止日期的信息，请参阅 <a target="_blank" rel="noopener" href="https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet">Windows 生命周期情况说明书</a>。</p>
+<p>操作系统版本</p>
+<p>KMS 客户端产品密钥</p>
+<p>Windows 11 专业版 Windows 10 专业版</p>
+<p>W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
+<p>Windows 11 专业版 N Windows 10 专业版 N</p>
+<p>MH37W-N47XK-V7XM9-C7227-GCQG9</p>
+<p>Windows 11 专业工作站版 Windows 10 专业工作站版</p>
+<p>NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J</p>
+<p>Windows 11 专业工作站版 N Windows 10 专业工作站版 N</p>
+<p>9FNHH-K3HBT-3W4TD-6383H-6XYWF</p>
+<p>Windows 11 专业教育版 Windows 10 专业教育版</p>
+<p>6TP4R-GNPTD-KYYHQ-7B7DP-J447Y</p>
+<p>Windows 11 专业教育版 N Windows 10 专业教育版 N</p>
+<p>YVWGF-BXNMC-HTQYQ-CPQ99-66QFC</p>
+<p>Windows 11 教育版 Windows 10 教育版</p>
+<p>NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</p>
+<p>Windows 11 教育版 N Windows 10 教育版 N</p>
+<p>2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</p>
+<p>Windows 11 企业版 Windows 10 企业版</p>
+<p>NPPR9-FWDCX-D2C8J-H872K-2YT43</p>
+<p>Windows 11 企业版 N Windows 10 企业版 N</p>
+<p>DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</p>
+<p>Windows 11 企业版 G Windows 10 企业版 G</p>
+<p>YYVX9-NTFWV-6MDM3-9PT4T-4M68B</p>
+<p>Windows 11 企业版 G N Windows 10 企业版 G N</p>
+<p>44RPN-FTY23-9VTTB-MP9BX-T84FV</p>
+<h3><span id="windows-10ltscx2fltsb-版本">Windows 10（LTSC&#x2F;LTSB 版本）</span></h3><h4><span id="windows-10-ltsc-2021-和-2019">Windows 10 LTSC 2021 和 2019</span></h4><p>操作系统版本</p>
+<p>KMS 客户端产品密钥</p>
+<p>Windows 10 企业版 LTSC 2021 Windows 10 企业版 LTSC 2019</p>
+<p>M7XTQ-FN8P6-TTKYV-9D4CC-J462D</p>
+<p>Windows 10 企业版 N LTSC 2021 Windows 10 企业版 N LTSC 2019</p>
+<p>92NFX-8DJQP-P6BBQ-THF9C-7CG2H</p>
+<h4><span id="windows-10-ltsb-2016">Windows 10 LTSB 2016</span></h4><p>操作系统版本</p>
+<p>KMS 客户端产品密钥</p>
+<p>Windows 10 企业版 LTSB 2016</p>
+<p>DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ</p>
+<p>Windows 10 企业版 N LTSB 2016</p>
+<p>QFFDN-GRT3P-VKWWX-X7T3R-8B639</p>
+<h4><span id="windows-10-ltsb-2015">Windows 10 LTSB 2015</span></h4><p>操作系统版本</p>
+<p>KMS 客户端产品密钥</p>
+<p>Windows 10 企业版 2015 LTSB</p>
+<p>WNMTR-4C88C-JK8YV-HQ7T2-76DF9</p>
+<p>Windows 10 企业版 2015 LTSB N</p>
+<p>2F77B-TNFGY-69QQF-B8YKP-D69TJ</p>
+<h3><span id="早期版本的-windows-server">早期版本的 Windows Server</span></h3><h4><span id="windows-server-版本-1803">Windows Server 版本 1803</span></h4><p>操作系统版本</p>
+<p>KMS 客户端产品密钥</p>
+<p>Windows Server Datacenter</p>
+<p>2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG</p>
+<p>Windows Server Standard</p>
+<p>PTXN8-JFHJM-4WC78-MPCBR-9W4KR</p>
+<h4><span id="windows-server-版本-1709">Windows Server 版本 1709</span></h4><p>操作系统版本</p>
+<p>KMS 客户端产品密钥</p>
+<p>Windows Server Datacenter</p>
+<p>6Y6KB-N82V8-D8CQV-23MJW-BWTG6</p>
+<p>Windows Server Standard</p>
+<p>DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4</p>
+<h4><span id="windows-server-2012-r2">Windows Server 2012 R2</span></h4><p>操作系统版本</p>
+<p>KMS 客户端产品密钥</p>
+<p>Windows Server 2012 R2 Standard</p>
+<p>D2N9P-3P6X9-2R39C-7RTCD-MDVJX</p>
+<p>Windows Server 2012 R2 Datacenter</p>
+<p>W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9</p>
+<p>Windows Server 2012 R2 Essentials</p>
+<p>KNC87-3J2TX-XB4WP-VCPJV-M4FWM</p>
+<h4><span id="windows-server-2012">Windows Server 2012</span></h4><p>操作系统版本</p>
+<p>KMS 客户端产品密钥</p>
+<p>Windows Server 2012</p>
+<p>BN3D2-R7TKB-3YPBD-8DRP2-27GG4</p>
+<p>Windows Server 2012 N</p>
+<p>8N2M2-HWPGY-7PGT9-HGDD8-GVGGY</p>
+<p>Windows Server 2012 单语言版</p>
+<p>2WN2H-YGCQR-KFX6K-CD6TF-84YXQ</p>
+<p>Windows Server 2012 特定国家&#x2F;地区版</p>
+<p>4K36P-JN4VD-GDC6V-KDT89-DYFKP</p>
+<p>Windows Server 2012 Standard</p>
+<p>XC9B7-NBPP2-83J2H-RHMBY-92BT4</p>
+<p>Windows Server 2012 MultiPoint 标准版</p>
+<p>HM7DN-YVMH3-46JC3-XYTG7-CYQJJ</p>
+<p>Windows Server 2012 MultiPoint 高级版</p>
+<p>XNH6W-2V9GX-RGJ4K-Y8X6F-QGJ2G</p>
+<p>Windows Server 2012 Datacenter</p>
+<p>48HP8-DN98B-MYWDG-T2DCC-8W83P</p>
+<h4><span id="windows-server-2008-r2">Windows Server 2008 R2</span></h4><p>操作系统版本</p>
+<p>KMS 客户端产品密钥</p>
+<p>Windows Server 2008 R2 Web 版</p>
+<p>6TPJF-RBVHG-WBW2R-86QPH-6RTM4</p>
+<p>Windows Server 2008 R2 HPC 版</p>
+<p>TT8MH-CG224-D3D7Q-498W2-9QCTX</p>
+<p>Windows Server 2008 R2 标准版</p>
+<p>YC6KT-GKW9T-YTKYR-T4X34-R7VHC</p>
+<p>Windows Server 2008 R2 企业版</p>
+<p>489J6-VHDMP-X63PK-3K798-CPX3Y</p>
+<p>Windows Server 2008 R2 Datacenter</p>
+<p>74YFP-3QFB3-KQT8W-PMXWJ-7M648</p>
+<p>面向基于 Itanium 系统的 Windows Server 2008 R2</p>
+<p>GT63C-RJFQ3-4GMB6-BRFB9-CB83V</p>
+<h4><span id="windows-2008-server">Windows 2008 Server</span></h4><p>操作系统版本</p>
+<p>KMS 客户端产品密钥</p>
+<p>Windows Web Server 2008</p>
+<p>WYR28-R7TFJ-3X2YQ-YCY4H-M249D</p>
+<p>Windows Server 2008 标准版</p>
+<p>TM24T-X9RMF-VWXK6-X8JC9-BFGM2</p>
+<p>不带 Hyper-V 的 Windows Server 2008 标准版</p>
+<p>W7VD6-7JFBR-RX26B-YKQ3Y-6FFFJ</p>
+<p>Windows Server 2008 企业版</p>
+<p>YQGMW-MPWTJ-34KDK-48M3W-X4Q6V</p>
+<p>不带 Hyper-V 的 Windows Server 2008 企业版</p>
+<p>39BXF-X8Q23-P2WWT-38T2F-G3FPG</p>
+<p>Windows Server 2008 HPC</p>
+<p>RCTX3-KWVHP-BR6TB-RB6DM-6X7HP</p>
+<p>Windows Server 2008 Datacenter</p>
+<p>7M67G-PC374-GR742-YH8V4-TCBY3</p>
+<p>不带 Hyper-V 的 Windows Server 2008 数据中心版</p>
+<p>22XQ2-VRXRG-P8D42-K34TD-G3QQC</p>
+<p>面向基于 Itanium 系统的 Windows Server 2008</p>
+<p>4DWFP-JF3DJ-B7DTH-78FJB-PDRHK</p>
+<h3><span id="早期版本的-windows">早期版本的 Windows</span></h3><h4><span id="windows-81">Windows 8.1</span></h4><p>操作系统版本</p>
+<p>KMS 客户端产品密钥</p>
+<p>Windows 8.1 专业版</p>
+<p>GCRJD-8NW9H-F2CDX-CCM8D-9D6T9</p>
+<p>Windows 8.1 专业版 N</p>
+<p>HMCNV-VVBFX-7HMBH-CTY9B-B4FXY</p>
+<p>Windows 8.1 企业版</p>
+<p>MHF9N-XY6XB-WVXMC-BTDCT-MKKG7</p>
+<p>Windows 8.1 企业版 N</p>
+<p>TT4HM-HN7YT-62K67-RGRQJ-JFFXW</p>
+<h4><span id="windows-8">Windows 8</span></h4><p>操作系统版本</p>
+<p>KMS 客户端产品密钥</p>
+<p>Windows 8 专业版</p>
+<p>NG4HW-VH26C-733KW-K6F98-J8CK4</p>
+<p>Windows 8 专业版 N</p>
+<p>XCVCF-2NXM9-723PB-MHCB7-2RYQQ</p>
+<p>Windows 8 企业版</p>
+<p>32JNW-9KQ84-P47T8-D8GGY-CWCK7</p>
+<p>Windows 8 企业版 N</p>
+<p>JMNMF-RHW7P-DMY6X-RF3DR-X2BQT</p>
+<h4><span id="windows-7">Windows 7</span></h4><p>操作系统版本</p>
+<p>KMS 客户端产品密钥</p>
+<p>Windows 7 专业版</p>
+<p>FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4</p>
+<p>Windows 7 专业版 N</p>
+<p>MRPKT-YTG23-K7D7T-X2JMM-QY7MG</p>
+<p>Windows 7 专业版 E</p>
+<p>W82YF-2Q76Y-63HXB-FGJG9-GF7QX</p>
+<p>Windows 7 企业版</p>
+<p>33PXH-7Y6KF-2VJC9-XBBR8-HVTHH</p>
+<p>Windows 7 企业版 N</p>
+<p>YDRBP-3D83W-TY26F-D46B2-XCKRJ</p>
+<p>Windows 7 企业版 E</p>
+<p>C29WB-22CC8-VJ326-GHFJW-H9DH4</p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys">https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys</a></p>
+<h3><span id="office">Office</span></h3><h5><span id="office-ltsc-2021">Office ltsc 2021</span></h5><p><strong>产品名</strong></p>
+<p>通用批量许可密钥（GVLK）</p>
+<p>Office LTSC 专业增强版 2021</p>
+<p>FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH</p>
+<p>Office LTSC 标准版 2021</p>
+<p>KDX7X-BNVR8-TXXGX-4Q7Y8-78VT3</p>
+<p>Project Professional 2021</p>
+<p>FTNWT-C6WBT-8HMGF-K9PRX-QV9H8</p>
+<p>Project Standard 2021</p>
+<p>J2JDC-NJCYY-9RGQ4-YXWMH-T3D4T</p>
+<p>Visio LTSC Professional 2021</p>
+<p>KNH8D-FGHT4-T8RK3-CTDYJ-K2HT4</p>
+<p>Visio LTSC Standard 2021</p>
+<p>MJVNY-BYWPY-CWV6J-2RKRT-4M8QG</p>
+<p>Access LTSC 2021</p>
+<p>WM8YG-YNGDD-4JHDC-PG3F4-FC4T4</p>
+<p>Excel LTSC 2021</p>
+<p>NWG3X-87C9K-TC7YY-BC2G7-G6RVC</p>
+<p>Outlook LTSC 2021</p>
+<p>C9FM6-3N72F-HFJXB-TM3V9-T86R9</p>
+<p>PowerPoint LTSC 2021</p>
+<p>TY7XF-NFRBR-KJ44C-G83KF-GX27K</p>
+<p>Publisher LTSC 2021</p>
+<p>2MW9D-N4BXM-9VBPG-Q7W6M-KFBGQ</p>
+<p>Skype for Business LTSC 2021</p>
+<p>HWCXN-K3WBT-WJBKY-R8BD9-XK29P</p>
+<p>Word LTSC 2021</p>
+<p>TN8H9-M34D3-Y64V9-TR72V-X79KV</p>
+<h5><span id="office-2019">Office 2019</span></h5><p><strong>产品名</strong></p>
+<p>通用批量许可密钥（GVLK）</p>
+<p>Office Professional Plus 2019</p>
+<p>NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP</p>
+<p>Office Standard 2019</p>
+<p>6NWWJ-YQWMR-QKGCB-6TMB3-9D9HK</p>
+<p>Project Professional 2019</p>
+<p>B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B</p>
+<p>Project Standard 2019</p>
+<p>C4F7P-NCP8C-6CQPT-MQHV9-JXD2M</p>
+<p>Visio Professional 2019</p>
+<p>9BGNQ-K37YR-RQHF2-38RQ3-7VCBB</p>
+<p>Visio Standard 2019</p>
+<p>7TQNQ-K3YQQ-3PFH7-CCPPM-X4VQ2</p>
+<p>Access 2019</p>
+<p>9N9PT-27V4Y-VJ2PD-YXFMF-YTFQT</p>
+<p>Excel 2019</p>
+<p>TMJWT-YYNMB-3BKTF-644 FC-RVXBD</p>
+<p>Outlook 2019</p>
+<p>7HD7K-N4PVK-BHBCQ-YWQRW-XW4VK</p>
+<p>PowerPoint 2019</p>
+<p>RRNCX-C64HY-W2MM7-MCH9G-TJHMQ</p>
+<p>Publisher 2019</p>
+<p>G2KWX-3NW6P-PY93R-JXK2T-C9Y9V</p>
+<p>Skype for Business 2019</p>
+<p>NCJ33-JHBBY-HTK98-MYCV8-HMKHJ</p>
+<p>Word 2019</p>
+<p>PBX3G-NWMT6-Q7XBW-PYJGG-WXD33</p>
+<p>_OneNote 2019_可以使用_OneNote 2016_的密钥激活。</p>
+<h5><span id="office-2016">Office 2016</span></h5><p><strong>产品名</strong></p>
+<p>通用批量许可密钥（GVLK）</p>
+<p>Office Professional Plus 2016</p>
+<p>XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99</p>
+<p>Office Standard 2016</p>
+<p>JNRGM-WHDWX-FJJG3-K47QV-DRTFM</p>
+<p>Project Professional 2016</p>
+<p>YG9NW-3K39V-2T3HJ-93F3Q-G83KT</p>
+<p>Project Standard 2016</p>
+<p>GNFHQ-F6YQM-KQDGJ-327XX-KQBVC</p>
+<p>Visio Professional 2016</p>
+<p>PD3PC-RHNGV-FXJ29-8JK7D-RJRJK</p>
+<p>Visio Standard 2016</p>
+<p>7WHWN-4T7MP-G96JF-G33KR-W8GF4</p>
+<p>Access 2016</p>
+<p>GNH9Y-D2J4T-FJHGG-QRVH7-QPFDW</p>
+<p>Excel 2016</p>
+<p>9C2PK-NWTVB-JMPW8-BFT28-7FTBF</p>
+<p>OneNote 2016</p>
+<p>DR92N-9HTF2-97XKM-XW2WJ-XW3J6</p>
+<p>Outlook 2016</p>
+<p>R69KK-NTPKF-7M3Q4-QYBHW-6MT9B</p>
+<p>PowerPoint 2016</p>
+<p>J7MQP-HNJ4Y-WJ7YM-PFYGF-BY6C6</p>
+<p>Publisher 2016</p>
+<p>F47MM-N3XJP-TQXJ9-BP99D-8 837 K</p>
+<p>Skype for Business 2016</p>
+<p>869NQ-FJ69K-466HW-QYCP2-DDBV6</p>
+<p>Word 2016</p>
+<p>WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6</p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/DeployOffice/vlactivation/gvlks">https://docs.microsoft.com/zh-cn/DeployOffice/vlactivation/gvlks</a></p>
+<h5><span id="office-2013">Office 2013</span></h5><p>产品名</p>
+<p>通用批量许可密钥（GVLK）</p>
+<p>Office 2013 Professional Plus</p>
+<p>YC7DK-G2NP3-2QQC3-J6H88-GVGXT</p>
+<p>Office 2013 Standard</p>
+<p>KBKQT-2NMXY-JJWGP-M62JB-92CD4</p>
+<p>Project 2013 Professional</p>
+<p>FN8TT-7WMH6-2D4X9-M337T-2342K</p>
+<p>Project 2013 Standard</p>
+<p>6NTH3-CW976-3G3Y2-JK3TX-8QHTT</p>
+<p>Visio 2013 Professional</p>
+<p>C2FG9-N6J68-H8BTJ-BW3QX-RM3B3</p>
+<p>Visio 2013 Standard</p>
+<p>J484Y-4NKBF-W2HMG-DBMJC-PGWR7</p>
+<p>Access 2013</p>
+<p>NG2JY-H4JBT-HQXYP-78QH9-4JM2D</p>
+<p>Excel 2013</p>
+<p>VGPNG-Y7HQW-9RHP7-TKPV3-BG7GB</p>
+<p>InfoPath 2013</p>
+<p>DKT8B-N7VXH-D963P-Q4PHY-F8894</p>
+<p>Lync 2013</p>
+<p>2MG3G-3BNTT-3MFW9-KDQW3-TCK7R</p>
+<p>OneNote 2013</p>
+<p>TGN6P-8MMBC-37P2F-XHXXK-P34VW</p>
+<p>Outlook 2013</p>
+<p>QPN8Q-BJBTJ-334K3-93TGY-2PMBT</p>
+<p>PowerPoint 2013</p>
+<p>4NT99-8RJFH-Q2VDH-KYG2C-4RD4F</p>
+<p>Publisher 2013</p>
+<p>PN2WF-29XG2-T9HJ7-JQPJR-FCXK4</p>
+<p>Word 2013</p>
+<p>6Q7VD-NX8JD-WJ2VH-88V73-4GBJ7</p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/previous-versions/office/dn385360(v=office.15)">https://docs.microsoft.com/zh-cn/previous-versions/office/dn385360(v=office.15)</a></p>
+<h5><span id="office-2010">Office 2010</span></h5><p>产品名</p>
+<p>通用批量许可密钥（GVLK）</p>
+<p>Office Professional Plus 2010</p>
+<p>VYBBJ-TRJPB-QFQRF-QFT4D-H3GVB</p>
+<p>Office Standard 2010</p>
+<p>V7QKV-4XVVR-XYV4D-F7DFM-8R6BM</p>
+<p>Office Home and Business 2010</p>
+<p>D6QFG-VBYP2-XQHM7-J97RH-VVRCK</p>
+<p>Access 2010</p>
+<p>V7Y44-9T38C-R2VJK-666HK-T7DDX</p>
+<p>Excel 2010</p>
+<p>H62QG-HXVKF-PP4HP-66KMR-CW9BM</p>
+<p>SharePoint Workspace 2010</p>
+<p>QYYW6-QP4CB-MBV6G-HYMCJ-4T3J4</p>
+<p>InfoPath 2010</p>
+<p>K96W8-67RPQ-62T9Y-J8FQJ-BT37T</p>
+<p>OneNote 2010</p>
+<p>Q4Y4M-RHWJM-PY37F-MTKWH-D3XHX</p>
+<p>Outlook 2010</p>
+<p>7YDC2-CWM8M-RRTJC-8MDVC-X3DWQ</p>
+<p>PowerPoint 2010</p>
+<p>RC8FX-88JRY-3PF7C-X8P67-P4VTT</p>
+<p>Project Professional 2010</p>
+<p>YGX6F-PGV49-PGW3J-9BTGG-VHKC6</p>
+<p>Project Standard 2010</p>
+<p>4HP3K-88W3F-W2K3D-6677X-F9PGB</p>
+<p>Publisher 2010</p>
+<p>BFK7F-9MYHM-V68C7-DRQ66-83YTP</p>
+<p>Word 2010</p>
+<p>HVHB3-C6FV7-KQX9W-YQG79-CRY7T</p>
+<p>Visio Premium 2010</p>
+<p>D9DWC-HPYVV-JGF4P-BTWQB-WX8BJ</p>
+<p>Visio Professional 2010</p>
+<p>7MCW8-VRQVK-G677T-PDJCM-Q8TCP</p>
+<p>Visio Standard 2010</p>
+<p>767HD-QGMWX-8QTDB-9G3R2-KHFGJ</p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/previous-versions/office/office-2010/ee624355(v=office.14)">https://docs.microsoft.com/zh-cn/previous-versions/office/office-2010/ee624355(v=office.14)</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Windows/" rel="tag"># Windows</a>
+              <a href="/tags/Office/" rel="tag"># Office</a>
+              <a href="/tags/%E6%BF%80%E6%B4%BB/" rel="tag"># 激活</a>
+              <a href="/tags/kms/" rel="tag"># kms</a>
+              <a href="/tags/%E5%BE%AE%E8%BD%AF/" rel="tag"># 微软</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/20180914.html" rel="prev" title="如何下载500px上的原图">
+                  <i class="fa fa-chevron-left"></i> 如何下载500px上的原图
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/20181013.html" rel="next" title="无法成功完成操作,因为文件包含病毒或潜在垃圾软件">
+                  无法成功完成操作,因为文件包含病毒或潜在垃圾软件 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">X</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

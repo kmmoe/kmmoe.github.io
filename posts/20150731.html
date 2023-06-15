@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="2015-07-31 © Sunplace,2015 卸载Modern下的所有应用（不支持Windows 10 10240以上的版本） 使用Windows8 MetroUI 助手可以方便直观卸载Modern应用！ 操作步骤: Win8、Win8.1、Win10安装后我们能发现里面会自带很多自家应用，这些应用无法通过界面操作来卸载，下面我们通过PowerShell命令来卸载系统自带应用： 一、以管">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何在Windows8、Win8.1下删除系统自带应用">
+<meta property="og:url" content="http://example.com/posts/20150731.html">
+<meta property="og:site_name" content="填言">
+<meta property="og:description" content="2015-07-31 © Sunplace,2015 卸载Modern下的所有应用（不支持Windows 10 10240以上的版本） 使用Windows8 MetroUI 助手可以方便直观卸载Modern应用！ 操作步骤: Win8、Win8.1、Win10安装后我们能发现里面会自带很多自家应用，这些应用无法通过界面操作来卸载，下面我们通过PowerShell命令来卸载系统自带应用： 一、以管">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/logos/tumblr.gif">
+<meta property="article:published_time" content="2015-07-31T12:16:23.000Z">
+<meta property="article:modified_time" content="2023-06-15T03:16:43.699Z">
+<meta property="article:author" content="X">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Windows8">
+<meta property="article:tag" content="Windows8.1">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://storage.kkii.org/jsunplace/logos/tumblr.gif">
+
+
+<link rel="canonical" href="http://example.com/posts/20150731.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/posts/20150731.html","path":"posts/20150731.html","title":"如何在Windows8、Win8.1下删除系统自带应用"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>如何在Windows8、Win8.1下删除系统自带应用 | 填言</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">填言</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">失语症研究中心</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">X</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">226</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">261</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/posts/20150731.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="X">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="填言">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="如何在Windows8、Win8.1下删除系统自带应用 | 填言">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          如何在Windows8、Win8.1下删除系统自带应用
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2015-07-31 20:16:23" itemprop="dateCreated datePublished" datetime="2015-07-31T20:16:23+08:00">2015-07-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-06-15 11:16:43" itemprop="dateModified" datetime="2023-06-15T11:16:43+08:00">2023-06-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OS/" itemprop="url" rel="index"><span itemprop="name">OS</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%A0%94%E7%A9%B6%E9%99%A2/" itemprop="url" rel="index"><span itemprop="name">软件研究院</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><img src="https://storage.kkii.org/jsunplace/logos/tumblr.gif"> 2015-07-31 © <a href="/disclaimer" title="免责声明">Sunplace</a>,2015</p>
+<p>卸载Modern下的所有应用（<strong>不支持Windows 10 10240以上的版本</strong>） <strong>使用Windows8 MetroUI 助手可以方便直观卸载Modern应用！</strong> 操作步骤: Win8、Win8.1、Win10安装后我们能发现里面会自带很多自家应用，这些应用无法通过界面操作来卸载，下面我们通过PowerShell命令来卸载系统自带应用： 一、以管理员身份打开PowerShell命令，可通过小娜查找，也可以点“开始—所有应用—Windows系统—PowerShell”，一定要以管理员身份。 二、Modern应用和名字不像我EXE那样，所以我们要先通过命令来列出所有的应用，输入“Get-AppxPackage”，回车，如下图，所有的应用都已经被列出来了。 三、来查找你要卸载的应用，这个里面可以按“Ctrl+F”来查找的，比如我要卸载系统自带的“视频”应用，通过“Ctrl+F”来查找，如下图： 那么，我已经找到这个应用的相应信息了，如下： Name : Microsoft.ZuneVideo Publisher : CN&#x3D;Microsoft Corporation, O&#x3D;Microsoft Corporation, L&#x3D;Redmond, S&#x3D;Washington, C&#x3D;US Architecture : X64 ResourceId : Version : 2.6.434.0 PackageFullName : Microsoft.ZuneVideo_2.6.434.0_x64__8wekyb3d8bbwe InstallLocation : C:\Program …… 这是完整的应用信息，它记录的应用的名称、架构版本等等的很详细信息。 四、接下来就是要卸载应用了， 命令Remove-AppxPackage 完整的文件名， 例如卸载视频：Remove-AppxPackage Microsoft.ZuneVideo_2.6.434.0_x64__8wekyb3d8bbwe，这样应用就被卸载了。 大家一定很好奇输入的名字怎么和Name不一样，这里要说明一点，卸载的时候一定要输入完整的文件名，即上面的PackageFullName， 建议大家可以复制我的命令和完整的文件名，因为PowerShell对大小写、横杠，点等要求很严格的，手动输入的话输错了会不识别的。 输入卸载命令敲回车后会出现上图中的部署过程，不用担心的，因为他就属于部署的过程，只不过是卸载。 PowerShell里面复制的操作如下： 点鼠标左键选中，点一下回车就已经复制成功了，到要粘贴的地方，点一下鼠标右键就可以粘贴。到这里你的卸载操作已经成功了，如果你要安装的话就到商店里搜索出来后再安装上就行了。 删除onedrive 一、禁止onedrive自启动 简单的就是在任务管理器的启动中禁用onedrive的启动项目就可以。 二、组策略管理 运行gpedit.msc，进入【计算机配置】-【管理模板】-【windows组件】-【onedrive】，右侧的三个选项： 默认情况下，将文档保存到 OneDrive，选择禁用； 禁止使用 OneDrive 进行文件存储，选择启用 禁止OneDrive 文件通过按流量的连接同步，选择启用。 三、删除onedrive的程序卸载 卸载方法一： 运行输入 %localappdata%\Microsoft\OneDrive\ ,查看版本号，一般是一串数值的形式。运行CMD命令，输入%localappdata%\Microsoft\OneDrive\XXXXXXXXXXXXXXX(刚才查看到的那个版本号)\OneDriveSetup &#x2F;uninstall，这个命令可以卸载掉大多的onedrive程序，剩余的可以自行删除（可能须要权限设置或者以管理员模式运行cmd） 卸载方法二： 强制删除。直接通过取得权限的方式来删除%localappdata%\Microsoft \onedrive文件夹（取得权限以后，可能需要先在进程中关闭掉相应的onedrive进程，才能把文件夹删除干净） 其实要是操作到卸载这一步的话，第1）点和第2）点的操作就属于重复操作。 四、关于删除导航栏中的onedrive。 卸载onedrive是不能清除导航栏里面的onedrive，进入注册表： HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}\ShellFolder 把右侧的Attributes属性的值 f080004d修改为f090004d。 任务管理器中重启资源管理器后就生效了。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Windows/" rel="tag"># Windows</a>
+              <a href="/tags/Windows8/" rel="tag"># Windows8</a>
+              <a href="/tags/Windows8-1/" rel="tag"># Windows8.1</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/20150729.html" rel="prev" title="简单暴力的Windows 10升级">
+                  <i class="fa fa-chevron-left"></i> 简单暴力的Windows 10升级
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/20150901.html" rel="next" title="组策略对应的注册表位置大全">
+                  组策略对应的注册表位置大全 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">X</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

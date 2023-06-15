@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="© 单纯的土豆 CSS对浏览器的兼容性有时让人很头疼,或许当你了解当中的技巧跟原理,就会觉得也不是难事,从网上收集了IE7,6与Fireofx的兼容性处理方法并整理了一下.对于web2.0的过度,请尽量用xhtml格式写代码,而且doctype影响CSS处理,作为W3C的标准,一定要加_doctype_声明。 CSS技巧1.div的内容垂直居中问题 vertical-align:middle; 将">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最全的CSS浏览器兼容问题">
+<meta property="og:url" content="http://example.com/posts/20161222.html">
+<meta property="og:site_name" content="填言">
+<meta property="og:description" content="© 单纯的土豆 CSS对浏览器的兼容性有时让人很头疼,或许当你了解当中的技巧跟原理,就会觉得也不是难事,从网上收集了IE7,6与Fireofx的兼容性处理方法并整理了一下.对于web2.0的过度,请尽量用xhtml格式写代码,而且doctype影响CSS处理,作为W3C的标准,一定要加_doctype_声明。 CSS技巧1.div的内容垂直居中问题 vertical-align:middle; 将">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-12-22T02:46:40.000Z">
+<meta property="article:modified_time" content="2023-06-15T03:16:44.675Z">
+<meta property="article:author" content="X">
+<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="兼容性">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/posts/20161222.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/posts/20161222.html","path":"posts/20161222.html","title":"最全的CSS浏览器兼容问题"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>最全的CSS浏览器兼容问题 | 填言</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">填言</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">失语症研究中心</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">CSS技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NOTfloatC"><span class="nav-number">2.</span> <span class="nav-text">FF与IE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NOTfloatC"><span class="nav-number">3.</span> <span class="nav-text">IE6,IE7,FF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NOTfloatC"><span class="nav-number">4.</span> <span class="nav-text">CSS3早期浏览器标识符</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">X</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">226</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">261</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/posts/20161222.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="X">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="填言">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="最全的CSS浏览器兼容问题 | 填言">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          最全的CSS浏览器兼容问题
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2016-12-22 10:46:40" itemprop="dateCreated datePublished" datetime="2016-12-22T10:46:40+08:00">2016-12-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-06-15 11:16:44" itemprop="dateModified" datetime="2023-06-15T11:16:44+08:00">2023-06-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BD%91%E7%AB%99/" itemprop="url" rel="index"><span itemprop="name">网站</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%A0%81%E5%86%9C/" itemprop="url" rel="index"><span itemprop="name">码农</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>© <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f66936ecdf99">单纯的土豆</a> CSS对浏览器的兼容性有时让人很头疼,或许当你了解当中的技巧跟原理,就会觉得也不是难事,从网上收集了IE7,6与Fireofx的兼容性处理方法并整理了一下.对于web2.0的过度,请尽量用xhtml格式写代码,而且doctype影响CSS处理,作为W3C的标准,一定要加_doctype_声明。</p>
+<h2><span id="css技巧">CSS技巧</span></h2><p><strong>1.div的内容垂直居中问题</strong></p>
+<p>vertical-align:middle;</p>
+<p>将行距增加到和整个DIV一样高</p>
+<p>line-height:200px;</p>
+<p>然后插入文字，就垂直居中了。 缺点是要控制内容不要换行。 <strong>2. margin加倍的问题</strong> 设置为float的div在IE下设置的margin会加倍。这是一个_IE6_都存在的bug。 解决方案是在这个div里面加上_display:inline;_ 例如：</p>
+<div id="iamfloat"></div>
+
+<p>相应的CSS为</p>
+<p>#iamfloat{float:left;<br>          margin:5px;&#x2F;*IE下理解为10px*&#x2F;<br>          display:inline;&#x2F;*IE下再理解为5px*&#x2F;<br>         }</p>
+<p><strong>3.浮动在IE产生的双倍距离</strong></p>
+<p>#box{ float:left;<br>      width:100px;<br>      margin:0 0 0 100px;<br>      &#x2F;*这种情况之下IE会产生200px的距离*&#x2F;<br>      display:inline;<br>      &#x2F;*使浮动忽略*&#x2F;<br>    }</p>
+<p>这里细说一下block与inline两个元素： block元素的特点是，总是在新行上开始，高度、宽度、行高、边距都可以控制(块元素)； inline元素的特点是，和其他元素在同一行上,不可控制(内嵌元素)；</p>
+<p>#box{  display:block; &#x2F;*可以为内嵌元素模拟为块元素*&#x2F;<br>       display:inline; &#x2F;*实现同一行排列的效果*&#x2F;<br>       diplay:table;<br>    }</p>
+<p><strong>4.IE与宽度和高度的问题</strong> IE不认得min-这个定义，但实际上它把正常的width和height当作有最小值的情况来使。这样问题就大了，如果只用宽度和高度，正常的浏览器里这两个值就不会变，如果只用min-width和min-height的话，IE下面根本等于没有设置宽度和高度。 比如要设置背景图片，这个宽度是比较重要的。 要解决这个问题，可以这样：</p>
+<p>#box{ width: 80px;<br>      height: 35px;<br>    }</p>
+<p>html&gt;body </p>
+<p>#box{ width: auto;<br>      height: auto;<br>      min-width: 80px;<br>      min-height: 35px;<br>    }</p>
+<p><strong>5.页面的最小宽度</strong> min-width是个非常方便的CSS命令，它可以指定元素最小也不能小于某个宽度，这样就能保证排版一直正确。 但IE不认得这个，而它实际上把width当做最小宽度来使。 为了让这一命令在IE上也能用，可以把一个<div> 放到 <body>标签下，然后为div指定一个类, 然后CSS这样设计：</body></div></p>
+<p>  #container{ min-width: 600px;<br>              width:expression(document.body.clientWidth &lt; 600? “600px”: “auto” );<br>             }</p>
+<p>第一个min-width是正常的； 但第2行的width使用了Javascript，这只有IE才认得，这也会让你的HTML文档不太正规。 它实际上通过Javascript的判断来实现最小宽度。 <strong>6.DIV浮动IE文本产生3像素的bug</strong> 左边对象浮动，右边采用外补丁的左边距来定位，右边对象内的文本会离左边有3px的间距。</p>
+<p>#box{ float:left;<br>      width:800px;<br>    }</p>
+<p>#left{ float:left;<br>       width:50%;<br>     } </p>
+<p>#right{ width:50%;}</p>
+<p>*html #left{ margin-right:-3px; &#x2F;*这句是关键*&#x2F;}</p>
+<div id="box">   
+     <div id="left"></div>   
+      <div id="right"></div>   
+</div>
+
+<p><strong>7.IE捉迷藏的问题</strong> 当div应用复杂的时候每个栏中又有一些链接，div等这个时候容易发生捉迷藏的问题。 有些内容显示不出来，当鼠标选择这个区域是发现内容确实在页面。 解决办法：对#layout使用line-height属性 或者给#layout使用固定高和宽。页面结构尽量简单。 <strong>8.float的div闭合、清除浮动、自适应高度</strong> <strong>8.1</strong> 例如：</p>
+   <div id="floatA">
+
+   <div id="floatB">
+
+   <div id="NOTfloatC">
+
+<p>这里的_NOTfloatC_并不希望继续平移，而是希望往下排。（其中floatA、floatB的属性已经设置为_float:left;_） 这段代码在IE中毫无问题，问题出在FF。原因是_NOTfloatC_并非float标签，必须将float标签闭合。 在</p>
+<div class="floatB"> 
+
+<div class="NOTfloatC">
+
+<p>之间加上 <code>&lt;div class=&quot;clear&quot;&gt;</code> 这个div一定要注意位置，而且必须与两个具有float属性的div同级，之间不能存在嵌套关系，否则会产生异常。 并且将clear这种样式定义为为如下即可：_.clear{ clear:both;}_ <strong>8.2</strong> 作为外部 wrapper 的 div 不要定死高度,为了让高度能自动适应，要在wrapper里面加上_overflow:hidden;_ 当包含float的 box的时候，高度自动适应在IE下无效，这时候应该触发IE的layout私有属性(万恶的IE啊！)用_zoom:1;_可以做到，这样就达到了兼容。 例如某一个wrapper如下定义：</p>
+<p>  .colwrapper{ overflow:hidden;<br>               zoom:1;<br>               margin:5px auto;<br>             }</p>
+<p><strong>8.3</strong> 对于排版,我们用得最多的CSS描述可能就是_float:left;_ 有的时候我们需要在n栏的float div后面做一个统一的背景,譬如:</p>
+<div id="page">   
+
+   <div id="left"></div>   
+
+   <div id="center"></div>   
+
+   <div id="right"></div>
+
+</div>
+
+<p>比如我们要将page的背景设置成蓝色,以达到所有三栏的背景颜色是蓝色的目的,但是我们会发现随着left center right的向下拉长,而 page居然保存高度不变,问题来了,原因在于page不是float属性,而我们的page由于要居中,不能设置成float,所以我们应该这样解决</p>
+ <div id="page">   
+
+   <div id="bg" style="float:left;width:100%;">   
+
+<pre><code> &lt;div id=&quot;left&quot;&gt;&lt;/div&gt;   
+
+ &lt;div id=&quot;center&quot;&gt;&lt;/div&gt;   
+
+ &lt;div id=&quot;right&quot;&gt;&lt;/div&gt;   
+</code></pre>
+   </div>   
+
+</div>
+
+<p>再嵌入一个float：left而宽度是100%的DIV解决之 <strong>8.4</strong> 万能float 闭合(非常重要!) 关于 clear float 的原理可参见 _[How To Clear Floats Without Structural Markup]<em>，将以下代码加入Global CSS中，给需要闭合的div加上_class&#x3D;”clearfix”</em> 即可，屡试不爽。</p>
+<p>&#x2F;* Clear Fix *&#x2F;<br>.clearfix:after { content:”.”;<br>                  display:block;<br>                  height:0;<br>                  clear:both;<br>                  visibility:hidden;<br>                }<br>.clearfix { display:inline-block; }</p>
+<p>&#x2F;* Hide from IE Mac *&#x2F;<br>.clearfix {display:block;}</p>
+<p>&#x2F;* End hide from IE Mac *&#x2F;<br>&#x2F;* end of clearfix *&#x2F;</p>
+<p>&#x2F;*或者这样设置*&#x2F;<br>.hackbox{ display:table;<br>          &#x2F;*将对象作为块元素级的表格显示*&#x2F;<br>        }</p>
+<p><strong>9.高度不适应</strong> 高度不适应是当内层对象的高度发生变化时外层高度不能自动进行调节，特别是当内层对象使用margin或padding 时。 例：</p>
+<p>   #box {background-color:#eee; }</p>
+<p>   #box p {margin-top: 20px;<br>           margin-bottom: 20px;<br>           text-align:center;<br>          }</p>
+ <div id="box">     
+         <p>p对象中的内容</p>     
+ </div>
+
+<p>解决方法：在p对象上下各加2个空的div对象CSS代码：</p>
+<p>  .1{height:0px;<br>     overflow:hidden;<br>    }</p>
+<p>或者为div加上border属性。 <strong>10.IE6下为什么图片下有空隙产生</strong> 解决这个bug的方法也有很多,可以是改变html的排版，或者设置img 为_display:block;_ 或者设置vertical-align属性为_vertical-align:top bottom middle text-bottom;_都可以解决。 <strong>11.如何对齐文本与文本输入框</strong> 加上 <em>vertical-align:middle;</em></p>
+<pre><code>    input &#123;      width:200px;      
+                 height:30px;      
+                 border:1px solid red;      
+                 vertical-align:middle; &#125;
+</code></pre>
+<p><strong>12.web标准中定义id与class有什么区别吗</strong> <strong>12.1 web标准中是不容许重复ID的</strong> 比如div id&#x3D;”aa”不容许重复2次，而class 定义的是类，理论上可以无限重复，这样需要多次引用的定义便可以使用他。 <strong>12.2 属性的优先级问题 id 的优先级要高于class,看上面的例子</strong> <strong>12.3 方便JS等客户端脚本</strong> 如果在页面中要对某个对象进行脚本操作，那么可以给他定义一个id，否则只能利用遍历页面元素加上指定特定属性来找到它，这是相对浪费时间资源,远远不如一个ID来得简单。 <strong>13. li中内容超过长度后以省略号显示的方法</strong> 此方法适用与_IE_与_Opera_浏览器</p>
+<p>li { width:200px;<br> white-space:nowrap;<br> text-overflow:ellipsis;<br>-o-text-overflow:ellipsis;<br>overflow:hidden; }</p>
+<p><strong>14.为什么web标准中IE无法设置滚动条颜色了</strong> 解决办法是将body换成html</p>
+<pre><code>           html &#123;  scrollbar-face-color:#f6f6f6;  
+                   scrollbar-highlight-color:#fff; 
+                   scrollbar-shadow-color:#eeeeee;  
+                   scrollbar-3dlight-color:#eeeeee;  
+                   scrollbar-arrow-color:#000;  
+                   scrollbar-track-color:#fff;  
+                   scrollbar-darkshadow-color:#fff;  
+                &#125;
+</code></pre>
+<p><strong>15.为什么无法定义1px左右高度的容器</strong> IE6下这个问题是因为默认的行高造成的，解决的方法也有很多，例如：<em>overflow:hidden zoom:0.08 line-height:1px;</em> <strong>16.怎么样才能让层显示在Flash之上呢</strong> 解决的办法是给Flash设置透明</p>
+ <param name="wmode" value="transparent">
+
+<p><strong>17.怎样使一个层垂直居中于浏览器中</strong> 这里我们使用百分比绝对定位,与外补丁负值的方法,负值的大小为其自身宽度高度除以二</p>
+<p>div {position:absolute;<br>                  top:50%;<br>                  lef:50%;<br>               margin:-100px 0 0 -100px;<br>                width:200px;<br>               height:200px;<br>               border:1px solid red;<br>            }</p>
+<h2><span id="ff与ie">FF与IE</span></h2><p><strong>1.Div居中问题</strong> div设置margin-left，margin-right为auto时已经居中，IE 不行，IE需要设定body居中，首先在父级元素定义_text-algin: center;<em>这个的意思就是在父级元素内的内容居中。 <strong>2.a的边框与背景</strong> a链接加边框和背景色，需设置_display: block;</em>, 同时设置_float: left;_保证不换行。 参照 menubar，给a和menubar设置高度是为了避免底边显示错位, 若不设height, 可以在menubar中插入一个空格。 <strong>3.a访问过后hover样式就不出现的问题</strong> 被点击访问过的超链接样式不在具有hover和active了,很多人应该都遇到过这个问题, 解决方法是改变CSS属性的排列顺序: L-V-H-A</p>
+<p>a:link {} a:visited {} a:hover {} a:active {}</p>
+<p><strong>4. 游标手指cursor</strong> _cursor: pointer;_可以同时在 IE FF 中显示游标手指状， _hand_仅 IE 可以 。 <strong>5.ul的padding与margin</strong> ul标签在FF中默认是有padding值的，而在IE中只有margin默认有值，所以先定义</p>
+<p>ul{margin:0;padding:0;}</p>
+<p>就能解决大部分问题。 <strong>6. form标签</strong> 这个标签在IE中,将会自动margin一些边距,而在FF中margin则是0，因此,如果想显示一致，所以最好在CSS中指定margin和 padding，针对上面两个问题，我的CSS中一般首先都使用这样的样式</p>
+<p>ul,form{margin:0;padding:0;}</p>
+<p>给定义死了,所以后面就不会为这个头疼了。 <strong>7. box模型解释不一致问题</strong> 在FF和IE中的box模型解释不一致导致相差2px解决方法：</p>
+<p>div{margin:30px!important;<br>    margin:28px;<br>   }</p>
+<p>注意这两个 margin的顺序一定不能写反，!important这个属性IE不能识别，但别的浏览器可以识别。所以在IE下其实解释成这样：</p>
+<p>div {maring:30px;<br>     margin:28px<br>    }</p>
+<p>重复定义的话按照最后一个来执行，所以不可以只写_margin:xx px!important;_</p>
+<p>#box{ width:600px; &#x2F;*for ie6.0*&#x2F;<br>      width:500px; &#x2F;*for ff+ie6.0*&#x2F;}<br>#box{ width:600px!important &#x2F;*for ff*&#x2F;<br>      width:600px; &#x2F;*for ff+ie6.0*&#x2F;<br>      width &#x2F;**&#x2F;:500px; &#x2F;*for ie6.0-*&#x2F;}</p>
+<p><strong>8.属性选择器(这个不能算是兼容,是隐藏CSS的一个bug)</strong></p>
+<p>  div[id]{}<br>  p[id]{}</p>
+<p>这个对于_IE6.0_和IE6.0以下的版本都隐藏，FF和OPera作用，属性选择器和子选择器还是有区别的，子选择器的范围从形式来说缩小了，属性选择器的范围比较大，如_p[id]_中，所有p标签中有id的都是同样式的。 <strong>9.最狠的手段 - !important;</strong> 如果实在没有办法解决一些细节问题，可以用这个方法。FF对于!important会自动优先解析,然而IE则会忽略，如下</p>
+<p> .tabd1{background:url(&#x2F;res&#x2F;images&#x2F;up&#x2F;tab1.gif) no-repeat 0px 0px !important; &#x2F;*Style for FF*&#x2F;<br>        background:url(&#x2F;res&#x2F;images&#x2F;up&#x2F;tab1.gif) no-repeat 1px 0px; &#x2F;* Style for IE *&#x2F;<br>       }</p>
+<p>值得注意的是，一定要将_xxxx !important;<em>这句放置在另一句之上，上面已经提过 <strong>10.IE,FF的默认值问题</strong> 或许你一直在抱怨为什么要专门为IE和FF写不同的CSS，为什么IE这样让人头疼，然后一边写css，一边咒骂那个可恶的IE. 其实对于CSS的标准支持方面，IE并没有我们想象的那么可恶，关键在于IE和FF的默认值不一样而已，掌握了这个技巧，你会发现写出兼容FF和IE的CSS并不是那么困难，或许对于简单的CSS，你完全可以不用!important这个东西了。 我们都知道，浏览器在显示网页的时候，都会根据网页的CSS样式表来决定如何显示，但是我们在样式表中未必会将所有的元素都进行了具体的描述，当然也没有必要那么做，所以对于那些没有描述的属性，浏览器将采用内置默认的方式来进行显示，譬如文字，如果你没有在CSS中指定颜色，那么浏览器将采用黑色或者系统颜色来显示，div或者其他元素的背景，如果在 css中没有被指定，浏览器则将其设置为白色或者透明，等等其他未定义的样式均如此。所以有很多东西出现FF和IE显示不一样的根本原因在于它们的默认显示不一样，而这个默认样式该如何显示我知道在w3中有没有对应的标准来进行规定，因此对于这点也就别去怪罪IE了。 <strong>11.为什么FF下文本无法撑开容器的高度</strong> 标准浏览器中固定高度值的容器是不会象IE6里那样被撑开的,那我又想固定高度,又想能被撑开需要怎样设置呢？ 办法就是去掉height设置_min-height:200px;</em> 这里为了照顾不认识min-height的_IE6_ 可以这样定义:</p>
+<p>.mydiv{ height:auto!important;<br>  height:200px;<br>  min-height:200px;<br>}</p>
+<p><strong>12.FireFox下如何使连续长字段自动换行</strong> 众所周知IE中直接使用_word-wrap:break-word;_就可以了, FF中我们使用JS插入 的方法来解决</p>
+<div id="ff">aaaaaa</div>
+
+<p>div {width:300px;<br>             word-wrap:break-word;<br>             border:1px solid red; }</p>
+<pre><code>    function toBreakWord(el, intLen)&#123;  var obj=document.getElementById(el);  
+                                       var strContent=obj.innerHTML;  
+                                       var strTemp=&quot;&quot;;  
+         while(strContent.length&gt;intLen)&#123;  
+             strTemp+=strContent.substr(0,intLen)+&quot;&amp;#10;&quot;;  
+             strContent=strContent.substr(intLen,strContent.length);&#125;  
+                                          strTemp+=&quot;&amp;#10;&quot;+strContent;  
+                                          obj.innerHTML=strTemp; 
+                                    &#125; if(document.getElementById   &amp;&amp;   !document.all)   
+                                            toBreakWord(&quot;ff&quot;, 37);
+</code></pre>
+<p><strong>13.为什么IE6下容器的宽度和FF解释不同呢</strong></p>
+<div onclick="alert(this.offsetWidth);">
+         让FireFox与IE兼容
+</div>
+
+<p>div {cursor:pointer;<br>              width:200px;<br>              height:200px;<br>              border:10px solid red;<br>             }</p>
+<p>问题的差别在于容器的整体宽度有没有将边框（border）的宽度算在其内,这里_IE6_解释为200px ,而FF则解释为220px,那究竟是怎么导致的问题呢？ 大家把容器顶部的xml去掉就会发现原来问题出在这,顶部的申明触发了IE的qurks mode,关于qurks mode、 standards mode的相关知识, 请参考:[http: &#x2F;&#x2F;<a target="_blank" rel="noopener" href="http://www.microsoft.com/china/msdn/library/webservices/asp.net/">www.microsoft.com/china/msdn/library/webservices/asp.net/</a> ASPNETusStan.mspx?mfr&#x3D;true](<a target="_blank" rel="noopener" href="http://www.microsoft.com/china/msdn/library/webservices/asp.net/">http://www.microsoft.com/china/msdn/library/webservices/asp.net/</a> ASPNETusStan.mspx?mfr&#x3D;true)</p>
+<h2><span id="ie6ie7ff">IE6,IE7,FF</span></h2><p>IE7.0 出来了，对CSS的支持又有新问题。 浏览器多了，网页兼容性更差了，疲于奔命的还是我们 ，为解决_IE7.0_的兼容问题，找来了下面这篇文章： 现在我大部分都是用!important来hack，对于_IE6_和_Firefox_测试可以正常显示，但是_IE7_对!important可以正确解释，会导致页面没按要求显示！下面是三个浏览器的兼容性收集. <strong>1.CSS HACK</strong></p>
+<p>height:20px; &#x2F;*For Firefox*&#x2F;</p>
+<p>*height:25px; &#x2F;*For IE7 &amp; IE6*&#x2F;</p>
+<p>_height:20px; &#x2F;*For IE6*&#x2F;</p>
+<p>注意顺序。 这样也属于CSS HACK，不过没有上面这样简洁。</p>
+<p>#example { color: #333; } &#x2F;* Moz *&#x2F;</p>
+<p>* html #example { color: #666; } &#x2F;* IE6 *&#x2F;</p>
+<p>*+html #example { color: #999; } &#x2F;* IE7 *&#x2F;</p>
+<!--其他浏览器 --> 
+
+<link rel="stylesheet" type="text/css" href="css.css">    
+
+<!--\[if IE 7\]>
+
+<!-- 适合于IE7 --> 
+
+<link rel="stylesheet" type="text/css" href="ie7.css">
+
+<!--\[endif\]-->  
+
+<!--\[if lte IE 6\]> 
+
+<!-- 适合于IE6及以下 --> 
+
+<link rel="stylesheet" type="text/css" href="ie.css"> 
+
+<!--\[endif\]-->
+
+<p><strong>第三种，CSS filter的办法，以下为经典从国外网站翻译过来的。.</strong> 新建一个CSS样式如下：</p>
+<p>  #item {width: 200px;<br>          height: 200px;<br>          background: red;<br>         }</p>
+<p>新建一个div，并使用前面定义的css的样式：</p>
+<div id="item">
+    some text here
+</div>
+
+<p>在body表现这里加入lang属性，中文为zh：_<body lang="en">_ 现在对div元素再定义一个样式：</body></p>
+<p>*:lang(en) </p>
+<p>#item{background:green !important;}</p>
+<p>这样做是为了用!important覆盖原来的CSS样式,由于:lang选择器_IE7.0_并不支持,所以对这句话不会有任何作用,于是也达到了_IE6.0_下同样的效果,但是很不幸地的是,_Safari_同样不支持此属性,所以需要加入以下CSS样式：</p>
+<p>#item:empty {background: green !important}</p>
+<p>:empty选择器为css3的规范,尽管Safari并不支持此规范,但是还是会选择此元素,不管是否此元素存在,现在绿色会现在在除IE各版本以外的浏览器上。 对_IE6_和FF的兼容可以考虑以前的!important 个人比较喜欢用</p>
+<hr>
+<h2><span id="css3早期浏览器标识符">CSS3早期浏览器标识符</span></h2><p>-ms-                &#x2F;*-ms代表ie内核识别码*&#x2F;<br>-moz-            &#x2F;*-moz代表火狐内核识别码*&#x2F;<br>-webkit-        &#x2F;*-webkit代表谷歌内核识别码*&#x2F;<br>-o-               &#x2F;*-o代表Opera内核识别码*&#x2F;<br>                   &#x2F;*统一标识语句*&#x2F;</p>
+</div></div></div></div></div>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/CSS/" rel="tag"># CSS</a>
+              <a href="/tags/html/" rel="tag"># html</a>
+              <a href="/tags/%E5%85%BC%E5%AE%B9%E6%80%A7/" rel="tag"># 兼容性</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/20160917.html" rel="prev" title="字幕制作软件">
+                  <i class="fa fa-chevron-left"></i> 字幕制作软件
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/20161230.html" rel="next" title="mx和cname记录冲突">
+                  mx和cname记录冲突 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">X</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="2011-03-16 © 百度知道&amp;Sunplace,2011 引言 倘若，你的光驱无法读碟，你的USB无法自启动，难道你会疯掉？答案是No，我们还可以硬盘安装系统。实际上这篇文章对×86（即32位）的Windows7和×64的都很管用。那么硬盘安装有什么条件么？ 0.1 无光驱，或光驱不读碟 可以尝试U盘安装系统。 0.2 无法进入系统 如果能进入系统，安装的又是32位，那就上虚拟光驱">
+<meta property="og:type" content="article">
+<meta property="og:title" content="32位系统硬盘安装64位win7（图文详解）">
+<meta property="og:url" content="http://example.com/posts/20110316.html">
+<meta property="og:site_name" content="填言">
+<meta property="og:description" content="2011-03-16 © 百度知道&amp;Sunplace,2011 引言 倘若，你的光驱无法读碟，你的USB无法自启动，难道你会疯掉？答案是No，我们还可以硬盘安装系统。实际上这篇文章对×86（即32位）的Windows7和×64的都很管用。那么硬盘安装有什么条件么？ 0.1 无光驱，或光驱不读碟 可以尝试U盘安装系统。 0.2 无法进入系统 如果能进入系统，安装的又是32位，那就上虚拟光驱">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/logos/baidu.gif">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20110316/000.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20110316/001.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20110316/002.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20110316/003.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20110316/004.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20110316/005.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20110316/006.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20110316/007.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20110316/008.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20110316/009.jpg">
+<meta property="article:published_time" content="2011-03-16T02:58:18.000Z">
+<meta property="article:modified_time" content="2023-06-15T03:16:42.276Z">
+<meta property="article:author" content="X">
+<meta property="article:tag" content="Windows7">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://storage.kkii.org/jsunplace/logos/baidu.gif">
+
+
+<link rel="canonical" href="http://example.com/posts/20110316.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/posts/20110316.html","path":"posts/20110316.html","title":"32位系统硬盘安装64位win7（图文详解）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>32位系统硬盘安装64位win7（图文详解） | 填言</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">填言</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">失语症研究中心</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">X</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">226</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">261</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/posts/20110316.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="X">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="填言">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="32位系统硬盘安装64位win7（图文详解） | 填言">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          32位系统硬盘安装64位win7（图文详解）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2011-03-16 10:58:18" itemprop="dateCreated datePublished" datetime="2011-03-16T10:58:18+08:00">2011-03-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-06-15 11:16:42" itemprop="dateModified" datetime="2023-06-15T11:16:42+08:00">2023-06-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OS/" itemprop="url" rel="index"><span itemprop="name">OS</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%A0%81%E5%86%9C/" itemprop="url" rel="index"><span itemprop="name">码农</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><img src="https://storage.kkii.org/jsunplace/logos/baidu.gif"> 2011-03-16 © 百度知道&amp;<a href="/disclaimer" title="免责声明">Sunplace</a>,2011</p>
+<p>引言 倘若，你的光驱无法读碟，你的USB无法自启动，难道你会疯掉？答案是No，我们还可以硬盘安装系统。实际上这篇文章对×86（即32位）的Windows7和×64的都很管用。那么硬盘安装有什么条件么？ 0.1 无光驱，或光驱不读碟 可以尝试U盘安装系统。 0.2 无法进入系统 如果能进入系统，安装的又是32位，那就上虚拟光驱吧。能进入系统，就不必进入WinPE了。无法进入系统，可以试着通过Windows PE（不知道PE的，请自行脑补……）。 0.3 无法从USB启动安装Windows7 如果有以上情况的，就适合硬盘安装了。 <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20110316/000.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20110316/000.jpg"></a> 图1 Windows PE的桌面 安装步骤详解（请按步骤操作，否则“嘻嘻嘻嘻……”） 1.1 首先<strong>C盘</strong>名称清空，默认“本地磁盘” 1.2 解压Windows7 64位镜像（安装版，非ghost。如果是ghost，就直接用WinPE自带的一键ghost吧。）到非系统盘，此处以<strong>D:\win7</strong>为例 <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20110316/001.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20110316/001.jpg"></a> 图2 将<strong>32</strong>位的bootsect.exe文件复制到C盘根目录 1.3 复制<strong>C:\boot\bootsect.exe</strong>至C盘根目录（<strong>此bootsect.exe为32位</strong>）没有的话，则自行下载之（上图蓝框内的是U盘里的32位的bootsect.exe） 1.4 复制<strong>D:\win7</strong>中boot文件夹、efi文件夹、bootmgr及bootmgr.efi至C盘根目录（C盘文件如下，可以无视System Volume Information，如果你没有看到这个） <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20110316/002.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20110316/002.jpg"></a> 图3 此图为复制到C盘的文件，图中没有“sources”文件夹，需要自行创建 1.5 在C盘根目录下新建sources文件夹，将<strong>D:\win7\Sources\boot.wim</strong>复制过来 1.6 运行cmd，输入命令</p>
+<p>c:\bootsect &#x2F;nt60 c:</p>
+<p>（注意中间有空格，运行结果如下图） <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20110316/003.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20110316/003.jpg"></a> 图4 看到“successfully”就对了 1.7 重启电脑，出现“开始安装界面”，(要注意了，不点击“现在安装”)点左下角“修复计算机”(repair you computer)，进入”系统恢复选择”，选择最后一项”命令提示符”(command prompt)，进入DOS窗口（图6~8） <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20110316/004.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20110316/004.jpg"></a> 图5 终于进来了，好辛苦，直接“下一步” <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20110316/005.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20110316/005.jpg"></a> 图6 点击“修复计算机” <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20110316/006.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20110316/006.jpg"></a> 图7 之后就看图…… <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20110316/007.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20110316/007.jpg"></a> 图8 选择“命令行提示符” 输入：</p>
+<p>xcopy d:\win7\boot c:\boot</p>
+<p>（盘符不分大小写） 再输入：</p>
+<p>xcopy d:\win7\boot\bootsect.exe c:</p>
+<p>（<strong>此bootsect.exe为64位</strong>） <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20110316/008.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20110316/008.jpg"></a> 图9 复制运行效果 1.8 重启电脑，出现“开始安装界面”，(要注意了，不点击“现在安装”)点左下角“修复计算机”(repair you computer)，进入”系统恢复选择”，选择最后一项”命令提示符”(command prompt)，进入DOS窗口。（见图6~8） 先格式化C盘：执行格式化命令</p>
+<p>format c:&#x2F;fs:ntfs</p>
+<p><a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20110316/009.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20110316/009.jpg"></a> 图10 格式化C盘 1.9 （<strong>千万不要点“重启”</strong>）关闭命令行窗口，之后关闭图8的窗口。此时，会自动倒退到如图6所示的窗口。我们就可以点击“现在安装”，进行无忧无虑的安装了。 编后语 这个情况是同学的老电脑需要安装64位Win7而做的虚拟机实验教程。希望对大家有用，笔者也算装机无数的过来人了。请各位多多评论指教。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Windows7/" rel="tag"># Windows7</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/20110312.html" rel="prev" title="手机内存不够">
+                  <i class="fa fa-chevron-left"></i> 手机内存不够
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/20110330.html" rel="next" title="用批处理文件开启服务">
+                  用批处理文件开启服务 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">X</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

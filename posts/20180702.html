@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="0.USB安装 以_Ubuntu10.04LTS(lucid)_为例： 进入“帮助” — F6 install cdrom-detect&#x2F;try-usb&#x3D;true 1.设置wlan # wpa_passphrase SSID PASSWORD &gt; &#x2F;etc&#x2F;wpa_config.conf #SSID：网络名，PASSWORD：密码 vi &#x2F;e">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux配置操作">
+<meta property="og:url" content="http://example.com/posts/20180702.html">
+<meta property="og:site_name" content="填言">
+<meta property="og:description" content="0.USB安装 以_Ubuntu10.04LTS(lucid)_为例： 进入“帮助” — F6 install cdrom-detect&#x2F;try-usb&#x3D;true 1.设置wlan # wpa_passphrase SSID PASSWORD &gt; &#x2F;etc&#x2F;wpa_config.conf #SSID：网络名，PASSWORD：密码 vi &#x2F;e">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/logos/ubuntu-old.gif">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/logos/ubuntu.gif">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20180702/000.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/logos/ubuntu.gif">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/logos/ubuntu-old.gif">
+<meta property="article:published_time" content="2018-07-02T01:41:59.000Z">
+<meta property="article:modified_time" content="2023-06-15T03:16:45.300Z">
+<meta property="article:author" content="X">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="ubuntu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://storage.kkii.org/jsunplace/logos/ubuntu-old.gif">
+
+
+<link rel="canonical" href="http://example.com/posts/20180702.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/posts/20180702.html","path":"posts/20180702.html","title":"Linux配置操作"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Linux配置操作 | 填言</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">填言</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">失语症研究中心</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">vi &#x2F;etc&#x2F;network&#x2F;interfaces</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">&#x2F;etc&#x2F;init.d&#x2F;networking restart #重启网络</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">&#x2F;etc&#x2F;init.d&#x2F;networking restart</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">This file is generated from information provided by</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">the datasource.  Changes to it will not persist across an instance.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">To disable cloud-init’s network configuration capabilities, write a file</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">&#x2F;etc&#x2F;cloud&#x2F;cloud.cfg.d&#x2F;99-disable-network-config.cfg with the following:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text">network: {config: disabled}</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">9.</span> <span class="nav-text">mount &#x2F;dev&#x2F;cdrom1 &#x2F;mnt #把光驱挂载到&#x2F;mnt目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">10.</span> <span class="nav-text">cd &#x2F;mnt #进入cd挂载的目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">11.</span> <span class="nav-text">umount &#x2F;dev&#x2F;cdrom1 #卸载光驱</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">12.</span> <span class="nav-text">apt-get install language-support-zh #安装中文支持</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">13.</span> <span class="nav-text">apt-get install ubuntu-desktop #安装ubuntu桌面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">14.</span> <span class="nav-text">apt-get install gsynaptic #安装新立得软件包管理器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">15.</span> <span class="nav-text">apt-get install network-manager* #安装网络管理器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">16.</span> <span class="nav-text">mount -t vfat &#x2F;dev&#x2F;sdb1 &#x2F;mnt #挂载U盘</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">17.</span> <span class="nav-text">cd &#x2F;mnt</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">18.</span> <span class="nav-text">umount &#x2F;dev&#x2F;sdb1 #卸载U盘</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">19.</span> <span class="nav-text">fdisk -l #列出所有分区</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">20.</span> <span class="nav-text">mount -t ntfs-3g  &#x2F;dev&#x2F;sdc1 &#x2F;mnt -ro force</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">21.</span> <span class="nav-text">locale-gen -en_US:en</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">22.</span> <span class="nav-text">tzselect</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">23.</span> <span class="nav-text">cp &#x2F;usr&#x2F;share&#x2F;zoneinfo&#x2F;Asia&#x2F;Shanghai  &#x2F;etc&#x2F;localtime</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">24.</span> <span class="nav-text">date -R</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">X</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">226</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">261</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/posts/20180702.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="X">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="填言">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Linux配置操作 | 填言">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Linux配置操作
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-07-02 09:41:59" itemprop="dateCreated datePublished" datetime="2018-07-02T09:41:59+08:00">2018-07-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-06-15 11:16:45" itemprop="dateModified" datetime="2023-06-15T11:16:45+08:00">2023-06-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OS/" itemprop="url" rel="index"><span itemprop="name">OS</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%A0%81%E5%86%9C/" itemprop="url" rel="index"><span itemprop="name">码农</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><strong>0.USB安装</strong> 以<img src="https://storage.kkii.org/jsunplace/logos/ubuntu-old.gif">_Ubuntu10.04LTS(lucid)_为例： 进入“帮助” — F6</p>
+<p>install cdrom-detect&#x2F;try-usb&#x3D;true</p>
+<p><strong>1.设置wlan</strong></p>
+<p># wpa_passphrase SSID PASSWORD &gt; &#x2F;etc&#x2F;wpa_config.conf #SSID：网络名，PASSWORD：密码</p>
+<h1><span id="vi-x2fetcx2fnetworkx2finterfaces">vi &#x2F;etc&#x2F;network&#x2F;interfaces</span></h1><p>auto wlan0<br>iface wlan0 inet dhcp &#x2F;&#x2F;注意在无线路由器上开启DHCP功能<br>wpa-conf &#x2F;etc&#x2F;wpa_config.conf</p>
+<h1><span id="x2fetcx2finitdx2fnetworking-restart-重启网络">&#x2F;etc&#x2F;init.d&#x2F;networking restart #重启网络</span></h1><p><img src="https://storage.kkii.org/jsunplace/logos/ubuntu.gif">安装界面配置静态地址，Subnet（子网的网段）格式： <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20180702/000.jpg" title="查看原图"><img src="https://storage.kkii.org/jsunplace/20180702/000.jpg"></a> 静态IP地址（有线）：</p>
+<p># vi &#x2F;etc&#x2F;network&#x2F;interfaces<br>auto eth0<br>iface eth0 inet static<br>address 192.168.3.123<br>netmask 255.255.255.0<br>gateway 192.168.3.1<br>dns-nameserver 114.114.114.114 8.8.8.8 </p>
+<h1><span id="x2fetcx2finitdx2fnetworking-restart">&#x2F;etc&#x2F;init.d&#x2F;networking restart</span></h1><p><img src="https://storage.kkii.org/jsunplace/logos/ubuntu.gif">_Ubuntu18.04LTS(bionic)_：</p>
+<p># cd &#x2F;etc&#x2F;netplan<br>&#x2F;etc&#x2F;netplan# ll<br>total 12<br>drwxr-xr-x  2 root root 4096 Aug 15 03:04 .&#x2F;<br>drwxr-xr-x 90 root root 4096 Aug 15 02:46 ..&#x2F;<br>-rw-r–r–  1 root root  580 Aug 15 02:43 50-cloud-init.yaml #新版本的网络配置在这个文件里<br>&#x2F;etc&#x2F;netplan# vi 50-cloud-init.yaml</p>
+<h1><span id="this-file-is-generated-from-information-provided-by">This file is generated from information provided by</span></h1><h1><span id="the-datasource-changes-to-it-will-not-persist-across-an-instance">the datasource.  Changes to it will not persist across an instance.</span></h1><h1><span id="to-disable-cloud-inits-network-configuration-capabilities-write-a-file">To disable cloud-init’s network configuration capabilities, write a file</span></h1><h1><span id="x2fetcx2fcloudx2fcloudcfgdx2f99-disable-network-configcfg-with-the-following">&#x2F;etc&#x2F;cloud&#x2F;cloud.cfg.d&#x2F;99-disable-network-config.cfg with the following:</span></h1><h1><span id="network-config-disabled">network: {config: disabled}</span></h1><p>network:<br>    ethernets:<br>        ens33:<br>            addresses:<br>            - 192.168.3.123&#x2F;24<br>            dhcp4: false<br>            gateway4: 192.168.3.1<br>            nameservers:<br>                addresses:<br>                - 192.168.3.1<br>                search: []<br>    version: 2<br>~<br>~<br>~<br>~<br>~<br>~<br>“50-cloud-init.yaml” 17L, 580C                                5,1           All</p>
+<p><strong>2.设置更新源</strong> 可能由于版本太旧或者更新太慢的问题，需要设置更新源。</p>
+<p># vi &#x2F;etc&#x2F;apt&#x2F;sources.list</p>
+<p>格式：</p>
+<p>deb [URL] [版本代号] main restricted universe multiverse<br>deb [URL] [版本代号]-security main restricted universe multiverse<br>deb [URL] [版本代号]-updates main restricted universe multiverse<br>deb [URL] [版本代号]-proposed main restricted universe multiverse<br>deb [URL] [版本代号]-backports main restricted universe multiverse<br>deb-src [URL] [版本代号] main restricted universe multiverse<br>deb-src [URL] [版本代号]-security main restricted universe multiverse<br>deb-src [URL] [版本代号]-updates main restricted universe multiverse<br>deb-src [URL] [版本代号]-proposed main restricted universe multiverse<br>deb-src [URL] [版本代号]-backports main restricted universe multiverse</p>
+<p>版本号</p>
+<p>代号</p>
+<p>发布时间</p>
+<p>18.04 LTS</p>
+<p>Bionic Beaver</p>
+<p>2018&#x2F;4&#x2F;26</p>
+<p>17.10</p>
+<p>Artful Aardvark</p>
+<p>2017&#x2F;10&#x2F;19</p>
+<p>16.04 LTS</p>
+<p>Xenial Xerus</p>
+<p>2016&#x2F;4&#x2F;21</p>
+<p>15.10</p>
+<p>Wily Werewolf</p>
+<p>2015&#x2F;10&#x2F;22</p>
+<p>15.04</p>
+<p>Vivid Vervet</p>
+<p>2015&#x2F;04&#x2F;23</p>
+<p>14.10</p>
+<p>Utopic Unicorn</p>
+<p>2014&#x2F;10&#x2F;23</p>
+<p>14.04 LTS</p>
+<p>Trusty Tahr</p>
+<p>2014&#x2F;04&#x2F;18</p>
+<p>13.10</p>
+<p>Saucy Salamander</p>
+<p>2013&#x2F;10&#x2F;17</p>
+<p>13.04</p>
+<p>Raring Ringtail</p>
+<p>2013&#x2F;04&#x2F;25</p>
+<p>12.10</p>
+<p>Quantal Quetzal</p>
+<p>2012&#x2F;10&#x2F;18</p>
+<p>12.04 LTS</p>
+<p>Precise Pangolin</p>
+<p>2012&#x2F;04&#x2F;26</p>
+<p>11.10</p>
+<p>Oneiric Ocelot</p>
+<p>2011&#x2F;10&#x2F;13</p>
+<p>11.04Unity成为默认桌面环境</p>
+<p>Natty Narwhal</p>
+<p>2011&#x2F;04&#x2F;28</p>
+<p>10.10</p>
+<p>Maverick Meerkat</p>
+<p>2010&#x2F;10&#x2F;10</p>
+<p>10.04 LTS</p>
+<p>Lucid Lynx</p>
+<p>2010&#x2F;04&#x2F;29</p>
+<p>9.10</p>
+<p>Karmic Koala</p>
+<p>2009&#x2F;10&#x2F;29</p>
+<p>9.04</p>
+<p>Jaunty Jackalope</p>
+<p>2009&#x2F;04&#x2F;23</p>
+<p>8.10</p>
+<p>Intrepid Ibex</p>
+<p>2008&#x2F;10&#x2F;30</p>
+<p>8.06官方查不到此版本发布信息</p>
+<p>Haughty Husky</p>
+<p>2008&#x2F;06&#x2F;07</p>
+<p>8.04 LTS</p>
+<p>Hardy Heron</p>
+<p>2008&#x2F;04&#x2F;24</p>
+<p>7.10</p>
+<p>Gutsy Gibbon</p>
+<p>2007&#x2F;10&#x2F;18</p>
+<p>7.04</p>
+<p>Feisty Fawn</p>
+<p>2007&#x2F;04&#x2F;19</p>
+<p>6.10</p>
+<p>Edgy Eft</p>
+<p>2006&#x2F;10&#x2F;26</p>
+<p>6.06 LTS</p>
+<p>Dapper Drake</p>
+<p>2006&#x2F;06&#x2F;01</p>
+<p>5.10</p>
+<p>Breezy Badger</p>
+<p>2005&#x2F;10&#x2F;13</p>
+<p>5.04</p>
+<p>Hoary Hedgehog</p>
+<p>2005&#x2F;04&#x2F;08</p>
+<p>4.10初始发布版本</p>
+<p>Warty Warthog</p>
+<p>2004&#x2F;10&#x2F;20</p>
+<p>* 标记的版本为已过时版本，国内没有对应的更新源镜像地址（只能通过_<a target="_blank" rel="noopener" href="http://old-releases.ubuntu.com/_%E6%9B%B4%E6%96%B0%EF%BC%89%E3%80%82">http://old-releases.ubuntu.com/_更新）。</a> 以<img src="https://storage.kkii.org/jsunplace/logos/ubuntu-old.gif">_Ubuntu10.04LTS(lucid)_为例：</p>
+<p>deb <a target="_blank" rel="noopener" href="http://old-releases.ubuntu.com/ubuntu">http://old-releases.ubuntu.com/ubuntu</a> lucid main restricted universe multiverse<br>deb <a target="_blank" rel="noopener" href="http://old-releases.ubuntu.com/ubuntu">http://old-releases.ubuntu.com/ubuntu</a> lucid-security main restricted universe multiverse<br>deb <a target="_blank" rel="noopener" href="http://old-releases.ubuntu.com/ubuntu">http://old-releases.ubuntu.com/ubuntu</a> lucid-updates main restricted universe multiverse<br>deb <a target="_blank" rel="noopener" href="http://old-releases.ubuntu.com/ubuntu">http://old-releases.ubuntu.com/ubuntu</a> lucid-proposed main restricted universe multiverse<br>deb <a target="_blank" rel="noopener" href="http://old-releases.ubuntu.com/ubuntu">http://old-releases.ubuntu.com/ubuntu</a> lucid-backports main restricted universe multiverse<br>deb-src <a target="_blank" rel="noopener" href="http://old-releases.ubuntu.com/ubuntu">http://old-releases.ubuntu.com/ubuntu</a> lucid main restricted universe multiverse<br>deb-src <a target="_blank" rel="noopener" href="http://old-releases.ubuntu.com/ubuntu">http://old-releases.ubuntu.com/ubuntu</a> lucid-security main restricted universe multiverse<br>deb-src <a target="_blank" rel="noopener" href="http://old-releases.ubuntu.com/ubuntu">http://old-releases.ubuntu.com/ubuntu</a> lucid-updates main restricted universe multiverse<br>deb-src <a target="_blank" rel="noopener" href="http://old-releases.ubuntu.com/ubuntu">http://old-releases.ubuntu.com/ubuntu</a> lucid-proposed main restricted universe multiverse<br>deb-src <a target="_blank" rel="noopener" href="http://old-releases.ubuntu.com/ubuntu">http://old-releases.ubuntu.com/ubuntu</a> lucid-backports main restricted universe multiverse</p>
+<p>保存后，执行：</p>
+<p># apt-get update #更新源</p>
+<p>以下命令非必要时请勿操作。</p>
+<p># apt-get upgrade #升级已安装软件包</p>
+<p><strong>3.挂载光驱</strong></p>
+<p># ls -l &#x2F;dev  grep cdrom #查询包含cdrom的设备<br>lrwxrwxrwx  1 root root           3 2018-07-03 12:55 cdrom1 -&gt; sr0<br>crw-rw—-  1 root cdrom    21,   0 2018-07-03 12:55 sg0<br>brw-rw—-+ 1 root cdrom    11,   0 2018-07-03 12:55 sr0</p>
+<h1><span id="mount-x2fdevx2fcdrom1-x2fmnt-把光驱挂载到x2fmnt目录">mount &#x2F;dev&#x2F;cdrom1 &#x2F;mnt #把光驱挂载到&#x2F;mnt目录</span></h1><p>mount: block device &#x2F;dev&#x2F;sr0 is write-protected, mounting read-only<br>mount: &#x2F;dev&#x2F;sr0 already mounted or &#x2F;mnt busy<br>mount: according to mtab, &#x2F;dev&#x2F;sr0 is already mounted on &#x2F;mnt</p>
+<h1><span id="cd-x2fmnt-进入cd挂载的目录">cd &#x2F;mnt #进入cd挂载的目录</span></h1><h1><span id="umount-x2fdevx2fcdrom1-卸载光驱">umount &#x2F;dev&#x2F;cdrom1 #卸载光驱</span></h1><p><strong>4.安装图形界面（Server版本）</strong> 以_Ubuntu10.04LTS(lucid)_为例：</p>
+<p># apt-get install xinit</p>
+<h1><span id="apt-get-install-language-support-zh-安装中文支持">apt-get install language-support-zh #安装中文支持</span></h1><p># apt-get install gdm #安装GNOME</p>
+<h1><span id="apt-get-install-ubuntu-desktop-安装ubuntu桌面">apt-get install ubuntu-desktop #安装ubuntu桌面</span></h1><h1><span id="apt-get-install-gsynaptic-安装新立得软件包管理器">apt-get install gsynaptic #安装新立得软件包管理器</span></h1><h1><span id="apt-get-install-network-manager-安装网络管理器">apt-get install network-manager* #安装网络管理器</span></h1><p>切换到图形界面，可以用<code>root</code>或者<code>moecat</code></p>
+<p>$ startx</p>
+<p><strong>5.挂载U盘、移动硬盘</strong> _FAT32_文件系统：</p>
+<p># fdisk -l #列出所有分区</p>
+<p>Disk &#x2F;dev&#x2F;sda: 21.5 GB, 21474836480 bytes<br>255 heads, 63 sectors&#x2F;track, 2610 cylinders<br>Units &#x3D; cylinders of 16065 * 512 &#x3D; 8225280 bytes<br>Sector size (logical&#x2F;physical): 512 bytes &#x2F; 512 bytes<br>I&#x2F;O size (minimum&#x2F;optimal): 512 bytes &#x2F; 512 bytes<br>Disk identifier: 0x000d91e4</p>
+<p>   Device Boot      Start         End      Blocks   Id  System<br>&#x2F;dev&#x2F;sda1   *           1        2497    20051968   83  Linux<br>&#x2F;dev&#x2F;sda2            2497        2611      916481    5  Extended<br>&#x2F;dev&#x2F;sda5            2497        2611      916480   82  Linux swap &#x2F; Solaris</p>
+<p>Disk &#x2F;dev&#x2F;sdb: 8178 MB, 8178892800 bytes<br>2 heads, 63 sectors&#x2F;track, 126780 cylinders<br>Units &#x3D; cylinders of 126 * 512 &#x3D; 64512 bytes<br>Sector size (logical&#x2F;physical): 512 bytes &#x2F; 512 bytes<br>I&#x2F;O size (minimum&#x2F;optimal): 512 bytes &#x2F; 512 bytes<br>Disk identifier: 0x00969512</p>
+<p>   Device Boot      Start         End      Blocks   Id  System<br>&#x2F;dev&#x2F;sdb1   *           1      126781     7987168    b  W95 FAT32</p>
+<h1><span id="mount-t-vfat-x2fdevx2fsdb1-x2fmnt-挂载u盘">mount -t vfat &#x2F;dev&#x2F;sdb1 &#x2F;mnt #挂载U盘</span></h1><h1><span id="cd-x2fmnt">cd &#x2F;mnt</span></h1><h1><span id="umount-x2fdevx2fsdb1-卸载u盘">umount &#x2F;dev&#x2F;sdb1 #卸载U盘</span></h1><p>_NTFS_文件系统：</p>
+<p># apt-get install ntfs-3g* #安装NTFS挂载软件</p>
+<h1><span id="fdisk-l-列出所有分区">fdisk -l #列出所有分区</span></h1><p>…（省略）…<br>Device Boot      Start         End      Blocks   Id  System<br>&#x2F;dev&#x2F;sdc1               1      121602   976759808    7  HPFS&#x2F;NTFS</p>
+<h1><span id="mount-t-ntfs-3g-x2fdevx2fsdc1-x2fmnt-ro-force">mount -t ntfs-3g  &#x2F;dev&#x2F;sdc1 &#x2F;mnt -ro force</span></h1><p><strong>6.远程桌面</strong></p>
+<p># apt-get install xrdp vnc4server xbase-clients</p>
+<p>在_&#x2F;usr&#x2F;share&#x2F;applications_目录下打开“桌面共享”选项，桌面共享选项中首先要开启共享，关于是否允许其他用户控制，远程连接时是否需要本机确认，远程连接的密码等项目根据需要自己设定。如果需要从公网即外部网络访问此ubuntu计算机需要开启”自动配置UPnP路由器开放和转发端口项目”。 下载安装VNC Viewer软件（Windows）。 <strong>7.更改默认语言</strong></p>
+<p># vi &#x2F;etc&#x2F;default&#x2F;locale<br>LANG&#x3D;”en_US.UTF-8″<br>LANGUAGE&#x3D;”en_US:en”</p>
+<h1><span id="locale-gen-en_usen">locale-gen -en_US:en</span></h1><p><strong>8.更改时区</strong></p>
+<p># date -R<br>Wed, 15 Aug 2018 03:14:08 +0000 #现在时区是0</p>
+<h1><span id="tzselect">tzselect</span></h1><p>…（省略）…<br> 4) Aisa<br>…（省略）…<br>#? 4<br>…（省略）…<br> 9) China<br>…（省略）…<br>#? 9<br>…（省略）…</p>
+<ol>
+<li>Beijing Time<br>…（省略）…</li>
+</ol>
+<p>#? 1<br>…（省略）…</p>
+<ol>
+<li>Yes<br>…（省略）…</li>
+</ol>
+<p>#? 1<br>…（省略）…</p>
+<h1><span id="cp-x2fusrx2fsharex2fzoneinfox2fasiax2fshanghai-x2fetcx2flocaltime">cp &#x2F;usr&#x2F;share&#x2F;zoneinfo&#x2F;Asia&#x2F;Shanghai  &#x2F;etc&#x2F;localtime</span></h1><h1><span id="date-r">date -R</span></h1><p>Wed, 15 Aug 2018 11:38:49 +0800 #变成东八区</p>
+<p><strong>参考资料</strong></p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/snaking616/article/details/52966634">https://blog.csdn.net/snaking616/article/details/52966634</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/cccrunner/article/details/78090079">https://blog.csdn.net/cccrunner/article/details/78090079</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/e682d5143c15">https://www.jianshu.com/p/e682d5143c15</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/20180608.html" rel="prev" title="在Windows 10 家庭版中启用组策略">
+                  <i class="fa fa-chevron-left"></i> 在Windows 10 家庭版中启用组策略
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/20180704.html" rel="next" title="Linux学习">
+                  Linux学习 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">X</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

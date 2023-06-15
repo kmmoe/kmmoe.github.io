@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="2014-11-07 © Sunplace,2014">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows手动搭建php环境">
+<meta property="og:url" content="http://example.com/posts/20141107.html">
+<meta property="og:site_name" content="填言">
+<meta property="og:description" content="2014-11-07 © Sunplace,2014">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/logos/tumblr.gif">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20141107/000.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20141107/hjii000.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20141107/hjii001.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20141107/hjii002.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20141107/hjii003.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20141107/hjii004.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20141107/001.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20141107/002.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20141107/003.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20141107/004.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20141107/005.jpg">
+<meta property="og:image" content="https://storage.kkii.org/jsunplace/20141107/006.jpg">
+<meta property="article:published_time" content="2014-11-07T04:19:43.000Z">
+<meta property="article:modified_time" content="2023-06-15T03:16:43.985Z">
+<meta property="article:author" content="X">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="php">
+<meta property="article:tag" content="IIS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://storage.kkii.org/jsunplace/logos/tumblr.gif">
+
+
+<link rel="canonical" href="http://example.com/posts/20141107.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/posts/20141107.html","path":"posts/20141107.html","title":"Windows手动搭建php环境"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Windows手动搭建php环境 | 填言</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">填言</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">失语症研究中心</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">X</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">226</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">261</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/posts/20141107.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="X">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="填言">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Windows手动搭建php环境 | 填言">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Windows手动搭建php环境
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2014-11-07 12:19:43" itemprop="dateCreated datePublished" datetime="2014-11-07T12:19:43+08:00">2014-11-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-06-15 11:16:43" itemprop="dateModified" datetime="2023-06-15T11:16:43+08:00">2023-06-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BD%91%E7%AB%99/" itemprop="url" rel="index"><span itemprop="name">网站</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%BD%AF%E4%BB%B6%E7%A0%94%E7%A9%B6%E9%99%A2/" itemprop="url" rel="index"><span itemprop="name">软件研究院</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%A0%81%E5%86%9C/" itemprop="url" rel="index"><span itemprop="name">码农</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><img src="https://storage.kkii.org/jsunplace/logos/tumblr.gif"> 2014-11-07 © <a href="/disclaimer" title="免责声明">Sunplace</a>,2014</p>
+<span id="more"></span>
+<p>0. 准备工作： 下载以下3个文件： <a target="_blank" rel="noopener" href="https://windows.php.net/download/">PHP</a>（zip） <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20141107/000.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20141107/000.jpg"></a> <a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/windows/installer/">MySQL</a>（完整版约287M的msi） Navicat for MySQL &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; PHP配置 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 1. 解压文件，重命名为php，放入C盘根目录，修改<strong>php.ini-development</strong>为<strong>php.ini</strong>并打开，修改php.ini（<strong>Ctrl+F</strong>搜索等号前面的内容）：</p>
+<p>short_open_tag &#x3D; On</p>
+<p>extension_dir &#x3D; “C:&#x2F;php&#x2F;ext”</p>
+<p>cgi.force_redirect &#x3D; 0</p>
+<p>cgi.fix_pathinfo&#x3D;1</p>
+<p>fastcgi.impersonate &#x3D; 1</p>
+<p>extension&#x3D;php_curl.dll</p>
+<p>extension&#x3D;php_gd2.dll</p>
+<p>extension&#x3D;php_mbstring.dll</p>
+<p>extension&#x3D;php_mysql.dll</p>
+<p>extension&#x3D;php_mysqli.dll</p>
+<p>extension&#x3D;php_pdo_mysql.dll</p>
+<p>extension&#x3D;php_pdo_odbc.dll</p>
+<p>extension&#x3D;php_xmlrpc.dll</p>
+<p>date.timezone &#x3D;Asia&#x2F;Shanghai</p>
+<p>2. 运行php-cgi.exe如果没有任何字符，证明配置基本正确。 如果出现缺少dll，安装C++运行库解决。 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; MySQL配置 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 3. 安装MySQL，选择<strong>Custom</strong>，只安装<strong>MySQL Server</strong>即可，注意安装默认数据库位置为：<strong>C:\ProgramData\MySQL\MySQL Server 5.6\data</strong> <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20141107/hjii000.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20141107/hjii000.jpg"></a> 3.1 展开到MySQL Server选择×64或×86，点击绿色的向右箭头。 <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20141107/hjii001.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20141107/hjii001.jpg"></a> 3.2 在右侧点一下MySQL Server，在下方就会出现一个”Advanced Options”。 <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20141107/hjii002.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20141107/hjii002.jpg"></a> 3.3 点击”Advanced Options”就能自定义数据库的安装位置和数据文件的存储位置了。 <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20141107/hjii003.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20141107/hjii003.jpg"></a> 3.4 点击”Execute”。提示”Ready to download”表示更新MySQL Server的版本。 <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20141107/hjii004.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20141107/hjii004.jpg"></a> 设置密码（连接数据库密码）： <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20141107/001.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20141107/001.jpg"></a> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; Navicat for MySQL配置 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 4. 运行navicat.exe，点击连接，连接名称自定义，密码输入<strong>安装MySQL所设的密码</strong>： <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20141107/002.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20141107/002.jpg"></a> 数据库的文件所放置的位置为MySQL安装时设置的位置。 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; IIS配置 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; Windows 7可用<a target="_blank" rel="noopener" href="https://phpmanager.codeplex.com/">PHP Manager 1.2 for IIS 7</a> 5. 从控制面板中添加你的IIS，确认<strong>CGI</strong>启用 <img src="https://storage.kkii.org/jsunplace/20141107/003.jpg"> 6. 打开IIS，在左侧选择你的主机名，右侧为<strong>默认文档</strong>添加index.php,处理程序映射，添加脚本映射。 <img src="https://storage.kkii.org/jsunplace/20141107/004.jpg"> 7. 点击是。 <a target="_blank" rel="noopener" href="https://storage.kkii.org/jsunplace/20141107/005.jpg" title="查看大图"><img src="https://storage.kkii.org/jsunplace/20141107/005.jpg"></a> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 完成配置 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 8. 添加一个网站，在文件夹下编写一个index.php文件：</p>
+<!DOCTYPE html>
+
+<html>
+<body>
+
+<?php
+echo "我的第一段 PHP 脚本！";
+?>
+
+</body>
+</html>
+
+<p>9. 浏览<a target="_blank" rel="noopener" href="https://localhost/">https://localhost/</a> <img src="https://storage.kkii.org/jsunplace/20141107/006.jpg"></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Windows/" rel="tag"># Windows</a>
+              <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+              <a href="/tags/php/" rel="tag"># php</a>
+              <a href="/tags/IIS/" rel="tag"># IIS</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/20141023.html" rel="prev" title="Office多版本共存">
+                  <i class="fa fa-chevron-left"></i> Office多版本共存
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/20141201.html" rel="next" title="将用户文件夹移动到非系统盘">
+                  将用户文件夹移动到非系统盘 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">X</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
